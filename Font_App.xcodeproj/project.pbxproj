@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5E8696351D20D74B005A03D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8696341D20D74B005A03D1 /* AppDelegate.swift */; };
-		5E8696371D20D74B005A03D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8696361D20D74B005A03D1 /* ViewController.swift */; };
 		5E86963A1D20D74B005A03D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8696381D20D74B005A03D1 /* Main.storyboard */; };
 		5E86963D1D20D74B005A03D1 /* Font_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E86963B1D20D74B005A03D1 /* Font_App.xcdatamodeld */; };
 		5E86963F1D20D74B005A03D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E86963E1D20D74B005A03D1 /* Assets.xcassets */; };
 		5E8696421D20D74B005A03D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8696401D20D74B005A03D1 /* LaunchScreen.storyboard */; };
+		5E98692B1D210F3B00616AC8 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E98692A1D210F3B00616AC8 /* CustomTableViewCell.swift */; };
+		5EE7162F1D210973009AEFDD /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE7162E1D210973009AEFDD /* RestaurantTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E8696311D20D74B005A03D1 /* Font_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Font_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8696341D20D74B005A03D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E8696361D20D74B005A03D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5E8696391D20D74B005A03D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E86963C1D20D74B005A03D1 /* Font_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Font_App.xcdatamodel; sourceTree = "<group>"; };
 		5E86963E1D20D74B005A03D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E8696411D20D74B005A03D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E8696431D20D74B005A03D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E98692A1D210F3B00616AC8 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		5EE7162E1D210973009AEFDD /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				5E8696341D20D74B005A03D1 /* AppDelegate.swift */,
-				5E8696361D20D74B005A03D1 /* ViewController.swift */,
 				5E8696381D20D74B005A03D1 /* Main.storyboard */,
 				5E86963E1D20D74B005A03D1 /* Assets.xcassets */,
 				5E8696401D20D74B005A03D1 /* LaunchScreen.storyboard */,
 				5E8696431D20D74B005A03D1 /* Info.plist */,
 				5E86963B1D20D74B005A03D1 /* Font_App.xcdatamodeld */,
+				5E98692A1D210F3B00616AC8 /* CustomTableViewCell.swift */,
+				5EE7162E1D210973009AEFDD /* RestaurantTableViewController.swift */,
 			);
 			path = Font_App;
 			sourceTree = "<group>";
@@ -99,6 +102,7 @@
 				TargetAttributes = {
 					5E8696301D20D74B005A03D1 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -138,9 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E8696371D20D74B005A03D1 /* ViewController.swift in Sources */,
 				5E8696351D20D74B005A03D1 /* AppDelegate.swift in Sources */,
 				5E86963D1D20D74B005A03D1 /* Font_App.xcdatamodeld in Sources */,
+				5E98692B1D210F3B00616AC8 /* CustomTableViewCell.swift in Sources */,
+				5EE7162F1D210973009AEFDD /* RestaurantTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +262,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lennon.Font-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -268,6 +274,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lennon.Font-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -290,6 +297,7 @@
 				5E8696481D20D74B005A03D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
