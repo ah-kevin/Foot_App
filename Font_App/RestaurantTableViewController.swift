@@ -19,6 +19,8 @@ class RestaurantTableViewController: UITableViewController {
 
 	var restaurnt_type = ["咖啡 & 茶店", "咖啡", "茶屋", "奥地利式 & 休闲饮料", "法式", "面包房", "面包房", "巧克力", "咖啡", "美式 & 海鲜", "美式", "美式", "早餐 & 早午餐", "法式 & 茶", "咖啡 & 茶", "拉丁美式", "西班牙式", "西班牙式", "西班牙式", "英式", "泰式"]
 
+	var goRestaurnt = [Bool](count: 21, repeatedValue: false);
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -56,7 +58,40 @@ class RestaurantTableViewController: UITableViewController {
 		cell.RestaurantImage.clipsToBounds = true
 		cell.RestaurantLocation.text = restaurnt_location[indexPath.row]
 		cell.RestaurantType.text = restaurnt_type[indexPath.row]
+		cell.heart.image = UIImage(named: "heart")
+		cell.heart.hidden = true
+		if goRestaurnt[indexPath.row] {
+//			cell.accessoryType = .Checkmark
+			cell.heart.hidden = false
+		} else {
+//			cell.accessoryType = .None
+			cell.heart.hidden = true
+		}
+
 		return cell
+	}
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		let alert = UIAlertController(title: "亲,你选择了我", message: "消息", preferredStyle: UIAlertControllerStyle.ActionSheet)
+		let cancelaction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
+
+		let handleDial = { (action: UIAlertAction) in
+			let alert = UIAlertController(title: "提示", message: "您拨打的电话暂时无法接通", preferredStyle: .Alert)
+			let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+			alert.addAction(action)
+			self.presentViewController(alert, animated: true, completion: nil)
+		}
+
+		let dialAction = UIAlertAction(title: "拨打 021-6532\(indexPath.row)", style: .Default, handler: handleDial)
+		let mecome = UIAlertAction(title: "我来过", style: .Default) { (_) in
+			let cell = tableView.cellForRowAtIndexPath(indexPath) as! CustomTableViewCell
+			// cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+			cell.heart.hidden = false
+			self.goRestaurnt[indexPath.row] = true
+		}
+		alert.addAction(cancelaction)
+		alert.addAction(dialAction)
+		alert.addAction(mecome)
+		self.presentViewController(alert, animated: true, completion: nil)
 	}
 
 	/*

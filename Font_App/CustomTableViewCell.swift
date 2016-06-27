@@ -14,7 +14,7 @@ class CustomTableViewCell: UITableViewCell {
 	@IBOutlet weak var RestaurantLocation: UILabel!
 	@IBOutlet weak var RestaurantName: UILabel!
 	@IBOutlet weak var RestaurantImage: UIImageView!
-
+	@IBOutlet weak var heart: UIImageView!
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		// Initialization code

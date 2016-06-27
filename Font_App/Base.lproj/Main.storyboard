@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Restaurant Table View Controller-->
@@ -30,7 +31,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="餐馆名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTf-dE-HJr">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" fixedFrame="YES">
                                                 <rect key="frame" x="86" y="9" width="205" height="21"/>
@@ -39,7 +40,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="类型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEZ-51-MAU">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" fixedFrame="YES">
                                                 <rect key="frame" x="86" y="50" width="205" height="21"/>
@@ -48,19 +49,62 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地点" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rg-f1-avt">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" fixedFrame="YES">
                                                 <rect key="frame" x="86" y="28" width="205" height="18"/>
                                             </variation>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zRg-d2-zqH">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="1mN-dO-sch"/>
+                                                <constraint firstAttribute="width" constant="36" id="5Aq-x9-Uf8">
+                                                    <variation key="widthClass=compact" constant="30"/>
+                                                </constraint>
+                                                <constraint firstAttribute="width" constant="30" id="S0k-yO-MNN"/>
+                                                <constraint firstAttribute="height" constant="36" id="Xem-Dx-r6O">
+                                                    <variation key="widthClass=compact" constant="30"/>
+                                                </constraint>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="1mN-dO-sch"/>
+                                                    <exclude reference="5Aq-x9-Uf8"/>
+                                                    <exclude reference="S0k-yO-MNN"/>
+                                                    <exclude reference="Xem-Dx-r6O"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="342" y="16" width="30" height="30"/>
+                                                <mask key="constraints">
+                                                    <exclude reference="1mN-dO-sch"/>
+                                                    <include reference="5Aq-x9-Uf8"/>
+                                                    <exclude reference="S0k-yO-MNN"/>
+                                                    <include reference="Xem-Dx-r6O"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="zRg-d2-zqH" secondAttribute="trailing" constant="46" id="J33-1g-1bC">
+                                            <variation key="widthClass=compact" constant="20"/>
+                                        </constraint>
+                                        <constraint firstItem="zRg-d2-zqH" firstAttribute="top" secondItem="n1S-hn-ZD8" secondAttribute="topMargin" constant="1" id="bjU-E7-CeU">
+                                            <variation key="widthClass=compact" constant="10"/>
+                                        </constraint>
+                                    </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
                                             <exclude reference="XBC-LK-WVw"/>
                                             <exclude reference="sTf-dE-HJr"/>
                                             <exclude reference="hEZ-51-MAU"/>
                                             <exclude reference="0rg-f1-avt"/>
+                                            <exclude reference="zRg-d2-zqH"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="J33-1g-1bC"/>
+                                            <exclude reference="bjU-E7-CeU"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
@@ -69,6 +113,11 @@
                                             <include reference="sTf-dE-HJr"/>
                                             <include reference="hEZ-51-MAU"/>
                                             <include reference="0rg-f1-avt"/>
+                                            <include reference="zRg-d2-zqH"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="J33-1g-1bC"/>
+                                            <include reference="bjU-E7-CeU"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -77,6 +126,7 @@
                                     <outlet property="RestaurantLocation" destination="0rg-f1-avt" id="JOj-0o-iP2"/>
                                     <outlet property="RestaurantName" destination="sTf-dE-HJr" id="Zsj-BS-raU"/>
                                     <outlet property="RestaurantType" destination="hEZ-51-MAU" id="r84-4H-OKq"/>
+                                    <outlet property="heart" destination="zRg-d2-zqH" id="S3G-DS-cBT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -88,7 +138,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wy2-TH-AmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132.5" y="583"/>
+            <point key="canvasLocation" x="912" y="627"/>
         </scene>
     </scenes>
 </document>
