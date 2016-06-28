@@ -10,31 +10,33 @@ import UIKit
 
 class RestaurantTableViewController: UITableViewController {
 	var restaurants = [
-		Restaurant(name: "咖啡胡同", type: "香港", location: "香港", image: "cafedeadend.jpg", isVisited: false),
-		Restaurant(name: "霍米", type: "香港", location: "香港", image: "homei.jpg", isVisited: false),
-		Restaurant(name: "茶.家", type: "香港", location: "香港", image: "teakha.jpg", isVisited: false),
-		Restaurant(name: "洛伊斯咖啡", type: "香港", location: "香港", image: "cafeloisl.jpg", isVisited: false),
-		Restaurant(name: "贝蒂生蚝", type: "香港", location: "香港", image: "petiteoyster.jpg", isVisited: false),
-		Restaurant(name: "福奇餐馆", type: "香港", location: "香港", image: "forkeerestaurant.jpg", isVisited: false),
-		Restaurant(name: "阿波画室", type: "香港", location: "香港", image: "posatelier.jpg", isVisited: false),
-		Restaurant(name: "伯克街面包坊", type: "悉尼", location: "悉尼", image: "bourkestreetbakery.jpg", isVisited: false),
-		Restaurant(name: "黑氏巧克力", type: "悉尼", location: "悉尼", image: "haighschocolate.jpg", isVisited: false),
-		Restaurant(name: "惠灵顿雪梨", type: "悉尼", location: "悉尼", image: "palominoespresso.jpg", isVisited: false),
-		Restaurant(name: "北州", type: "纽约", location: "纽约", image: "upstate.jpg", isVisited: false),
-		Restaurant(name: "布鲁克林塔菲", type: "纽约", location: "纽约", image: "traif.jpg", isVisited: false),
-		Restaurant(name: "格雷厄姆大街肉", type: "纽约", location: "纽约", image: "grahamavenuemeats.jpg", isVisited: false),
-		Restaurant(name: "华夫饼 & 沃夫", type: "纽约", location: "纽约", image: "wafflewolf.jpg", isVisited: false),
-		Restaurant(name: "五叶", type: "纽约", location: "纽约", image: "fiveleaves.jpg", isVisited: false),
-		Restaurant(name: "眼光咖啡", type: "纽约", location: "纽约", image: "cafelore.jpg", isVisited: false),
-		Restaurant(name: "忏悔", type: "纽约", location: "纽约", image: "confessional.jpg", isVisited: false),
-		Restaurant(name: "巴拉菲娜", type: "伦敦", location: "伦敦", image: "barrafina.jpg", isVisited: false),
-		Restaurant(name: "多尼西亚", type: "伦敦", location: "伦敦", image: "donostia.jpg", isVisited: false),
-		Restaurant(name: "皇家橡树", type: "伦敦", location: "伦敦", image: "royaloak.jpg", isVisited: false),
-		Restaurant(name: "泰咖啡", type: "伦敦", location: "伦敦", image: "thaicafe.jpg", isVisited: false),
+		Restaurant(name: "咖啡胡同", type: "咖啡 & 茶店", location: "香港", image: "cafedeadend.jpg", isVisited: false),
+		Restaurant(name: "霍米", type: "咖啡", location: "香港", image: "homei.jpg", isVisited: false),
+		Restaurant(name: "茶.家", type: "茶屋", location: "香港", image: "teakha.jpg", isVisited: false),
+		Restaurant(name: "洛伊斯咖啡", type: "奥地利式 & 休闲饮料", location: "香港", image: "cafeloisl.jpg", isVisited: false),
+		Restaurant(name: "贝蒂生蚝", type: "法式", location: "香港", image: "petiteoyster.jpg", isVisited: false),
+		Restaurant(name: "福奇餐馆", type: "面包房", location: "香港", image: "forkeerestaurant.jpg", isVisited: false),
+		Restaurant(name: "阿波画室", type: "面包房", location: "香港", image: "posatelier.jpg", isVisited: false),
+		Restaurant(name: "伯克街面包坊", type: "巧克力", location: "悉尼", image: "bourkestreetbakery.jpg", isVisited: false),
+		Restaurant(name: "黑氏巧克力", type: "咖啡", location: "悉尼", image: "haighschocolate.jpg", isVisited: false),
+		Restaurant(name: "惠灵顿雪梨", type: "美式 & 海鲜", location: "悉尼", image: "palominoespresso.jpg", isVisited: false),
+		Restaurant(name: "北州", type: "美式", location: "纽约", image: "upstate.jpg", isVisited: false),
+		Restaurant(name: "布鲁克林塔菲", type: "美式", location: "纽约", image: "traif.jpg", isVisited: false),
+		Restaurant(name: "格雷厄姆大街肉", type: "早餐 & 早午餐", location: "纽约", image: "grahamavenuemeats.jpg", isVisited: false),
+		Restaurant(name: "华夫饼 & 沃夫", type: "法式 & 茶", location: "纽约", image: "wafflewolf.jpg", isVisited: false),
+		Restaurant(name: "五叶", type: "咖啡 & 茶", location: "纽约", image: "fiveleaves.jpg", isVisited: false),
+		Restaurant(name: "眼光咖啡", type: "拉丁美式", location: "纽约", image: "cafelore.jpg", isVisited: false),
+		Restaurant(name: "忏悔", type: "西班牙式", location: "纽约", image: "confessional.jpg", isVisited: false),
+		Restaurant(name: "巴拉菲娜", type: "西班牙式", location: "伦敦", image: "barrafina.jpg", isVisited: false),
+		Restaurant(name: "多尼西亚", type: "西班牙式", location: "伦敦", image: "donostia.jpg", isVisited: false),
+		Restaurant(name: "皇家橡树", type: "英式", location: "伦敦", image: "royaloak.jpg", isVisited: false),
+		Restaurant(name: "泰咖啡", type: "泰式", location: "伦敦", image: "thaicafe.jpg", isVisited: false),
 	]
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+
+		navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
 
 		// Uncomment the following line to preserve selection between presentations
 		// self.clearsSelectionOnViewWillAppear = false
@@ -184,7 +186,7 @@ class RestaurantTableViewController: UITableViewController {
 		// Get the new view controller using segue.destinationViewController.
 		// Pass the selected object to the new view controller.
 		if segue.identifier == "showRestaurantDetail" {
-			let desVC = segue.destinationViewController as! RestaurantDetailViewController
+			let desVC = segue.destinationViewController as! DetailTableViewController
 			desVC.restaurant = restaurants[tableView.indexPathForSelectedRow!.row]
 		}
 	}

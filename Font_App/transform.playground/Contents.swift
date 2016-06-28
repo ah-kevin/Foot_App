@@ -14,5 +14,5 @@ var restaurnt_type = ["咖啡 & 茶店", "咖啡", "茶屋", "奥地利式 & 休
 var goRestaurnt = [Bool](count: 21, repeatedValue: false);
 
 for i in 0..<restaurnt.count {
-	print("Restaurant(name:\"\(restaurnt[i])\",type:\"\(restaurnt_location[i])\",location:\"\(restaurnt_location[i])\",image:\"\(restaurnt_image[i])\",isVisited:\(goRestaurnt[i]))", ",")
+	print("Restaurant(name:\"\(restaurnt[i])\",type:\"\(restaurnt_type[i])\",location:\"\(restaurnt_location[i])\",image:\"\(restaurnt_image[i])\",isVisited:\(goRestaurnt[i]))", ",")
 }
