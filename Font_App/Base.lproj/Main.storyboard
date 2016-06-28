@@ -233,8 +233,7 @@
                                             <exclude reference="LnC-IY-syZ"/>
                                         </mask>
                                     </variation>
-                                    <variation key="widthClass=compact" misplaced="YES">
-                                        <rect key="frame" x="352" y="8" width="40" height="40"/>
+                                    <variation key="widthClass=compact">
                                         <mask key="constraints">
                                             <include reference="HOt-vi-Dpz"/>
                                             <include reference="LnC-IY-syZ"/>
@@ -244,30 +243,68 @@
                                         <segue destination="9Tv-OJ-Co1" kind="presentation" identifier="showReview" id="Kcq-DD-FH9"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1E-cs-Ra1">
+                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                    <color key="backgroundColor" red="1" green="0.02144757118" blue="0.017717367370000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="iHX-EF-nvA"/>
+                                        <constraint firstAttribute="height" constant="40" id="mJY-0K-Rru"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <state key="normal" image="map"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="iHX-EF-nvA"/>
+                                            <exclude reference="mJY-0K-Rru"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="iHX-EF-nvA"/>
+                                            <include reference="mJY-0K-Rru"/>
+                                        </mask>
+                                    </variation>
+                                    <connections>
+                                        <segue destination="RD3-1s-Cde" kind="show" identifier="showMap" id="3mM-Uq-sRW"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="j1E-cs-Ra1" firstAttribute="top" secondItem="E3v-6s-psm" secondAttribute="bottom" constant="8" symbolic="YES" id="DdW-7x-uXn"/>
                                 <constraint firstAttribute="trailing" secondItem="E3v-6s-psm" secondAttribute="trailing" constant="10" id="Iab-dF-7WC"/>
                                 <constraint firstItem="E3v-6s-psm" firstAttribute="top" secondItem="oCx-Wb-p3b" secondAttribute="top" constant="10" id="XBp-fy-9j8"/>
+                                <constraint firstItem="j1E-cs-Ra1" firstAttribute="leading" secondItem="E3v-6s-psm" secondAttribute="leading" id="XsG-wp-jHB"/>
                             </constraints>
                             <variation key="default">
                                 <mask key="subviews">
                                     <exclude reference="7jt-Sa-CqF"/>
                                     <exclude reference="E3v-6s-psm"/>
+                                    <exclude reference="j1E-cs-Ra1"/>
                                 </mask>
                                 <mask key="constraints">
                                     <exclude reference="Iab-dF-7WC"/>
                                     <exclude reference="XBp-fy-9j8"/>
+                                    <exclude reference="DdW-7x-uXn"/>
+                                    <exclude reference="XsG-wp-jHB"/>
                                 </mask>
                             </variation>
                             <variation key="widthClass=compact">
                                 <mask key="subviews">
                                     <include reference="7jt-Sa-CqF"/>
                                     <include reference="E3v-6s-psm"/>
+                                    <include reference="j1E-cs-Ra1"/>
                                 </mask>
                                 <mask key="constraints">
                                     <include reference="Iab-dF-7WC"/>
                                     <include reference="XBp-fy-9j8"/>
+                                    <include reference="DdW-7x-uXn"/>
+                                    <include reference="XsG-wp-jHB"/>
                                 </mask>
                             </variation>
                         </view>
@@ -327,6 +364,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZo-Au-UUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1838" y="550"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="NsU-iN-4ef">
+            <objects>
+                <viewController id="RD3-1s-Cde" customClass="MapViewController" customModule="Font_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gAQ-Im-Tlw"/>
+                        <viewControllerLayoutGuide type="bottom" id="LcU-nv-1tr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4jR-XJ-5md">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="e9p-F4-GqP">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <connections>
+                                    <outlet property="delegate" destination="RD3-1s-Cde" id="TMR-0n-0js"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e9p-F4-GqP" firstAttribute="top" secondItem="4jR-XJ-5md" secondAttribute="top" id="C6z-fc-F54"/>
+                            <constraint firstItem="e9p-F4-GqP" firstAttribute="bottom" secondItem="LcU-nv-1tr" secondAttribute="top" id="Jk3-SH-EUS"/>
+                            <constraint firstItem="e9p-F4-GqP" firstAttribute="leading" secondItem="4jR-XJ-5md" secondAttribute="leading" id="Nb3-GM-3Nu"/>
+                            <constraint firstAttribute="trailing" secondItem="e9p-F4-GqP" secondAttribute="trailing" id="aGm-sy-2Wo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="e9p-F4-GqP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="C6z-fc-F54"/>
+                                <exclude reference="Jk3-SH-EUS"/>
+                                <exclude reference="Nb3-GM-3Nu"/>
+                                <exclude reference="aGm-sy-2Wo"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="e9p-F4-GqP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="C6z-fc-F54"/>
+                                <include reference="Jk3-SH-EUS"/>
+                                <include reference="Nb3-GM-3Nu"/>
+                                <include reference="aGm-sy-2Wo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="MapView" destination="e9p-F4-GqP" id="Kto-g0-J7h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iVl-kQ-PP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2605.5" y="-131"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="xI0-8Y-PuU">
@@ -590,6 +683,7 @@
         <image name="dislike" width="84" height="84"/>
         <image name="good" width="256" height="256"/>
         <image name="great" width="256" height="256"/>
+        <image name="map" width="48" height="48"/>
         <image name="rating" width="256" height="256"/>
     </resources>
 </document>

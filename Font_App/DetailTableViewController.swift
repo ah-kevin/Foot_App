@@ -9,6 +9,7 @@
 import UIKit
 
 class DetailTableViewController: UITableViewController {
+
 	var restaurant: Restaurant!
 
 	@IBOutlet weak var imageView: UIImageView!
@@ -104,15 +105,17 @@ class DetailTableViewController: UITableViewController {
 	 }
 	 */
 
-	/*
-	 // MARK: - Navigation
+	// MARK: - Navigation
 
-	 // In a storyboard-based application, you will often want to do a little preparation before navigation
-	 override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-	 // Get the new view controller using segue.destinationViewController.
-	 // Pass the selected object to the new view controller.
-	 }
-	 */
+	// In a storyboard-based application, you will often want to do a little preparation before navigation
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		// Get the new view controller using segue.destinationViewController.
+		// Pass the selected object to the new view controller.
+		if segue.identifier == "showMap" {
+			let desVC = segue.destinationViewController as! MapViewController
+			desVC.restaurant = restaurant
+		}
+	}
 
 	@IBAction func close(segue: UIStoryboardSegue) {
 		if let sourceVC = segue.sourceViewController as? ReviewViewController {
