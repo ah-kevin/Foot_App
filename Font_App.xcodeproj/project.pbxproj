@@ -10,6 +10,7 @@
 		5E3137341D22232500177DED /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3137331D22232500177DED /* Restaurant.swift */; };
 		5E393AAF1D22299500DC7C43 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E393AAE1D22299500DC7C43 /* DetailTableViewController.swift */; };
 		5E393AB11D22360800DC7C43 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E393AB01D22360800DC7C43 /* DetailTableViewCell.swift */; };
+		5E393AB31D22515400DC7C43 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E393AB21D22515400DC7C43 /* ReviewViewController.swift */; };
 		5E8696351D20D74B005A03D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8696341D20D74B005A03D1 /* AppDelegate.swift */; };
 		5E86963A1D20D74B005A03D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8696381D20D74B005A03D1 /* Main.storyboard */; };
 		5E86963D1D20D74B005A03D1 /* Font_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E86963B1D20D74B005A03D1 /* Font_App.xcdatamodeld */; };
@@ -24,6 +25,7 @@
 		5E393AAC1D22254D00DC7C43 /* transform.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = transform.playground; sourceTree = "<group>"; };
 		5E393AAE1D22299500DC7C43 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		5E393AB01D22360800DC7C43 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		5E393AB21D22515400DC7C43 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		5E8696311D20D74B005A03D1 /* Font_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Font_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8696341D20D74B005A03D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E8696391D20D74B005A03D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				5E8696381D20D74B005A03D1 /* Main.storyboard */,
 				5E393AB01D22360800DC7C43 /* DetailTableViewCell.swift */,
 				5E393AAE1D22299500DC7C43 /* DetailTableViewController.swift */,
+				5E393AB21D22515400DC7C43 /* ReviewViewController.swift */,
 				5E86963E1D20D74B005A03D1 /* Assets.xcassets */,
 				5E8696401D20D74B005A03D1 /* LaunchScreen.storyboard */,
 				5E8696431D20D74B005A03D1 /* Info.plist */,
@@ -167,6 +170,7 @@
 				5E3137341D22232500177DED /* Restaurant.swift in Sources */,
 				5E86963D1D20D74B005A03D1 /* Font_App.xcdatamodeld in Sources */,
 				5E98692B1D210F3B00616AC8 /* CustomTableViewCell.swift in Sources */,
+				5E393AB31D22515400DC7C43 /* ReviewViewController.swift in Sources */,
 				5EE7162F1D210973009AEFDD /* RestaurantTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

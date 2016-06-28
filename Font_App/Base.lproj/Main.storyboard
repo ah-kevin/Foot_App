@@ -326,10 +326,10 @@
             </objects>
             <point key="canvasLocation" x="1838" y="550"/>
         </scene>
-        <!--View Controller-->
+        <!--Review View Controller-->
         <scene sceneID="xI0-8Y-PuU">
             <objects>
-                <viewController id="9Tv-OJ-Co1" sceneMemberID="viewController">
+                <viewController id="9Tv-OJ-Co1" customClass="ReviewViewController" customModule="Font_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rxn-iM-r25"/>
                         <viewControllerLayoutGuide type="bottom" id="anZ-Me-Yj3"/>
@@ -540,6 +540,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="bgimageView" destination="U9f-bF-2Nd" id="SgI-mS-a5X"/>
+                        <outlet property="stackView" destination="vzC-Ie-xZe" id="P1e-kP-ceB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgw-Tk-5nK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="y0Z-jW-fBU" userLabel="Exit" sceneMemberID="exit"/>
