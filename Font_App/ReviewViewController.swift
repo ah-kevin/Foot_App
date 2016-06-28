@@ -9,10 +9,26 @@
 import UIKit
 
 class ReviewViewController: UIViewController {
+	var rating: String?
 
 	@IBOutlet weak var bgimageView: UIImageView!
 	@IBOutlet weak var stackView: UIStackView!
 
+	@IBAction func ratingBtnTapped(sender: UIButton) {
+		switch sender.tag {
+		case 100:
+			rating = "dislike"
+		case 200:
+			rating = "good"
+		case 300:
+			rating = "great"
+		default:
+			break
+		}
+
+		performSegueWithIdentifier("unwindToDetailView", sender: sender)
+
+	}
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
