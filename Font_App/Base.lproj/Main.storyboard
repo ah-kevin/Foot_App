@@ -75,8 +75,7 @@
                                                     <exclude reference="Xem-Dx-r6O"/>
                                                 </mask>
                                             </variation>
-                                            <variation key="widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="342" y="16" width="30" height="30"/>
+                                            <variation key="widthClass=compact">
                                                 <mask key="constraints">
                                                     <exclude reference="1mN-dO-sch"/>
                                                     <include reference="5Aq-x9-Uf8"/>

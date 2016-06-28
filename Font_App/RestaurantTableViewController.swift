@@ -61,10 +61,8 @@ class RestaurantTableViewController: UITableViewController {
 		cell.heart.image = UIImage(named: "heart")
 		cell.heart.hidden = true
 		if goRestaurnt[indexPath.row] {
-//			cell.accessoryType = .Checkmark
 			cell.heart.hidden = false
 		} else {
-//			cell.accessoryType = .None
 			cell.heart.hidden = true
 		}
 
@@ -102,17 +100,23 @@ class RestaurantTableViewController: UITableViewController {
 	 }
 	 */
 
-	/*
-	 // Override to support editing the table view.
-	 override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-	 if editingStyle == .Delete {
-	 // Delete the row from the data source
-	 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-	 } else if editingStyle == .Insert {
-	 // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-	 }
-	 }
-	 */
+	// Override to support editing the table view.
+	override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+		if editingStyle == .Delete {
+			// Delete the row from the data source
+//			tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+			restaurnt.removeAtIndex(indexPath.row)
+			restaurnt_image.removeAtIndex(indexPath.row)
+			restaurnt_type.removeAtIndex(indexPath.row)
+			restaurnt_location.removeAtIndex(indexPath.row)
+			goRestaurnt.removeAtIndex(indexPath.row)
+
+			tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+
+		} else if editingStyle == .Insert {
+			// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+		}
+	}
 
 	/*
 	 // Override to support rearranging the table view.
