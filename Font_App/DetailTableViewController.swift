@@ -113,4 +113,8 @@ class DetailTableViewController: UITableViewController {
 	 }
 	 */
 
+	@IBAction func close(segue: UIStoryboardSegue) {
+
+	}
+
 }
